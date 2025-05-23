@@ -7,21 +7,17 @@ import routerPost from "./router/post.js"
 const app = express()
 
 // Dichiato la porta
-const port = 3004
+const port = 3005
 
 
 // Collego il file al router
-app.use("/post", routerPost);
-
-
-
-
+app.use("/posts", routerPost);
 
 
 // Url di base
 app.use("/", (req, res) => {
     res.json({
-        data: `Eccomi qua!`
+        data: `Sono la pagina principale`
     })
 })
 
